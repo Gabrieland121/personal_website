@@ -1,71 +1,167 @@
-# Getting Started with Create React App
+# Personal Portfolio Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern, interactive personal portfolio website built with React, featuring algorithm visualizations and a cyberpunk-inspired design aesthetic.
 
-## Available Scripts
+## 📋 Table of Contents
 
-In the project directory, you can run:
+- [Features](#features)
+- [Project Structure](#project-structure)
+- [Technologies Used](#technologies-used)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Deployment](#deployment)
+- [Algorithm Visualizations](#algorithm-visualizations)
+- [Customization](#customization)
+- [Contributing](#contributing)
+- [License](#license)
 
-### `npm start`
+## ✨ Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Interactive Algorithm Visualizations**: Demonstrates BFS traversals and sorting algorithms
+- **Responsive Design**: Fully responsive layout that works on all devices
+- **Cyberpunk Aesthetic**: Modern design with algorithm-inspired visual elements
+- **About Me Section**: Detailed personal background with academic interests and goals
+- **Projects Showcase**: Highlighting personal and academic projects
+- **Skills & Experience**: Visual representation of technical skills and experience
+- **Contact Form**: Easy way for visitors to get in touch
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 📁 Project Structure
 
-### `npm test`
+```
+personal_website/
+├── public/               # Static files
+│   ├── images/           # Image assets
+│   └── index.html        # HTML entry point
+├── src/                  # Source code
+│   ├── components/       # React components
+│   │   ├── About.js      # About section component
+│   │   ├── Contact.js    # Contact form component
+│   │   ├── Header.js     # Header/navigation component
+│   │   ├── Projects.js   # Projects showcase component
+│   │   └── ...           # Other components
+│   ├── styles/           # CSS styles
+│   ├── utils/            # Utility functions and algorithm implementations
+│   ├── App.js            # Main App component
+│   └── index.js          # JavaScript entry point
+├── package.json          # Project dependencies and scripts
+└── README.md             # Project documentation
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🛠️ Technologies Used
 
-### `npm run build`
+- **React**: v19.1.0
+- **CSS3**: Custom styling with responsive design
+- **JavaScript (ES6+)**: Modern JavaScript features
+- **React Router**: For navigation between pages
+- **Algorithm Visualizations**: Custom implementations of graph traversals and sorting algorithms
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 📥 Installation
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/personal_website.git
+   cd personal_website
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-### `npm run eject`
+## 🚀 Usage
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Development Server
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Run the development server:
+```bash
+npm start
+```
+This will start the app in development mode at [http://localhost:3000](http://localhost:3000).
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Building for Production
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Create a production build:
+```bash
+npm run build
+```
+This generates optimized files in the `build` folder, ready for deployment.
 
-## Learn More
+## 🌐 Deployment
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+This site can be deployed to various hosting platforms:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Vercel (Recommended)
+```bash
+npm install -g vercel
+vercel
+```
 
-### Code Splitting
+### Netlify
+```bash
+npm install -g netlify-cli
+netlify deploy
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### GitHub Pages
+1. Add homepage to package.json:
+   ```json
+   "homepage": "https://yourusername.github.io/personal_website"
+   ```
+2. Install gh-pages:
+   ```bash
+   npm install --save-dev gh-pages
+   ```
+3. Add deploy scripts to package.json:
+   ```json
+   "predeploy": "npm run build",
+   "deploy": "gh-pages -d build"
+   ```
+4. Deploy:
+   ```bash
+   npm run deploy
+   ```
 
-### Analyzing the Bundle Size
+## 🧮 Algorithm Visualizations
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+The website features interactive visualizations of:
 
-### Making a Progressive Web App
+- **Graph Traversals**: Breadth-First Search (BFS) with animated node exploration
+- **Sorting Algorithms**: Visual demonstrations of sorting efficiency
+- **Network Graphs**: Interactive network visualizations
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+These visualizations are implemented in the `src/utils/` directory and rendered as React components.
 
-### Advanced Configuration
+## 🎨 Customization
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### Personal Information
 
-### Deployment
+Update your personal information in the About component:
+- `src/components/About.js`: Edit the text content to reflect your background, interests, and goals
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### Projects
 
-### `npm run build` fails to minify
+Add your own projects in the Projects component:
+- `src/components/Projects.js`: Modify the project data to showcase your work
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# personal_website
+### Styling
+
+Customize the visual appearance:
+- `src/styles/`: Modify CSS files to change colors, fonts, and layout
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## 📄 License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+---
+
+Built with ❤️ using React
