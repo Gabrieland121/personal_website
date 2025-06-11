@@ -1,0 +1,115 @@
+.skills {
+  padding: 5rem 0;
+  background-color: #0a0a0a;
+  color: #00ff41;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 3rem;
+  position: relative;
+  color: #00ff41;
+  text-shadow: 0 0 10px rgba(0, 255, 65, 0.7);
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 3px;
+  background-color: #00ff41;
+  box-shadow: 0 0 10px rgba(0, 255, 65, 0.7);
+}
+
+.technical-skills {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+}
+
+.skill-category {
+  margin-bottom: 2.5rem;
+  background-color: rgba(0, 20, 40, 0.7);
+  border: 1px solid #00ff41;
+  border-radius: 5px;
+  padding: 2.2rem 2.8rem;
+  box-shadow: 0 0 15px rgba(0, 255, 65, 0.3);
+}
+
+.skill-category h3 {
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
+  color: #00ff41;
+  border-bottom: 2px solid #00ff41;
+  padding-bottom: 0.8rem;
+  display: inline-block;
+  text-shadow: 0 0 5px rgba(0, 255, 65, 0.7);
+}
+
+.skill-category ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.skill-category li {
+  margin-bottom: 1.2rem;
+  position: relative;
+  padding-left: 2rem;
+  color: #00ffff;
+  font-size: 1.7rem;
+  line-height: 1.5;
+}
+
+.skill-category li:before {
+  content: ">";
+  position: absolute;
+  left: 0;
+  color: #00ff41;
+  font-size: 1.7rem;
+}
+
+@media screen and (max-width: 1200px) {
+  .technical-skills {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .skills {
+    padding: 3rem 0;
+  }
+  
+  .technical-skills {
+    grid-template-columns: 1fr;
+    padding: 0 1rem;
+  }
+  
+  .skill-category {
+    padding: 1.8rem;
+  }
+  
+  .skill-category h3 {
+    font-size: 1.8rem;
+  }
+  
+  .skill-category li {
+    font-size: 1.4rem;
+    padding-left: 1.8rem;
+    margin-bottom: 1rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .skill-category h3 {
+    font-size: 1.6rem;
+  }
+  
+  .skill-category li {
+    font-size: 1.3rem;
+    padding-left: 1.5rem;
+  }
+}

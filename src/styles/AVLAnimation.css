@@ -1,0 +1,21 @@
+.avl-animation {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.avl-animation.left {
+  left: 5%;
+}
+
+.avl-animation.right {
+  right: 5%;
+}
+
+@media screen and (max-width: 768px) {
+  .avl-animation {
+    display: none;
+  }
+}
